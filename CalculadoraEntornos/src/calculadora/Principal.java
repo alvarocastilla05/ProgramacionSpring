@@ -9,6 +9,7 @@ public class Principal {
 		double num1, num2;
 		int op;
 		String aux;
+		double multi;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -28,6 +29,17 @@ public class Principal {
 				case 2:
 					break;
 				case 3:
+					System.out.println("Introduzca numero 1:");
+					aux=sc.nextLine();
+					num1=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca numero 2:");
+					aux=sc.nextLine();
+					num2=Integer.parseInt(aux);
+					
+					multi = num1*num2;
+
+					System.out.println(multi);
 					break;
 				case 4:
 					break;
