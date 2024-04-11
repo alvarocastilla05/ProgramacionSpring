@@ -9,6 +9,7 @@ public class Principal {
 		double num1, num2;
 		int op;
 		String aux;
+		double division;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -30,6 +31,17 @@ public class Principal {
 				case 3:
 					break;
 				case 4:
+					System.out.println("Introduzca numero 1:");
+					aux=sc.nextLine();
+					num1=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca numero 2:");
+					aux=sc.nextLine();
+					num2=Integer.parseInt(aux);
+					
+					division = num1/num2;
+
+					System.out.println(division);
 					break;
 				case 0:
 					System.out.println("Saliendo...");
