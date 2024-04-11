@@ -35,7 +35,7 @@ public class Principal {
 					aux=sc.nextLine();
 					num2=Integer.parseInt(aux);
 					
-					resta = num1+num2;
+					resta = num1-num2;
 
 					System.out.println(resta);
 					break;
