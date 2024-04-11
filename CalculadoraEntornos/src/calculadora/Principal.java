@@ -9,6 +9,7 @@ public class Principal {
 		double num1, num2;
 		int op;
 		String aux;
+		double suma;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -24,6 +25,17 @@ public class Principal {
 			
 			switch(op) {
 				case 1:
+					System.out.println("Introduzca numero 1:");
+					aux=sc.nextLine();
+					num1=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca numero 2:");
+					aux=sc.nextLine();
+					num2=Integer.parseInt(aux);
+					
+					suma = num1+num2;
+
+					System.out.println(suma);
 					break;
 				case 2:
 					break;
