@@ -1,5 +1,7 @@
 package com.salesianostriana.dam.primerproyectodatajpa;
 
+import java.util.function.Consumer;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +18,25 @@ public class MainDeMentira {
 	
 	@PostConstruct
 	void ejecutar() {
-		repo.save(new Alumno("Alvaro", "Castilla Cano", "castilla.caalv24@triana.salesianos.edu"));
+		Alumno a = new Alumno("Alvaro", "Castilla Cano", "castilla.caalv24@triana.salesianos.edu");
+		repo.save(a);
+		
+		a.setNombre("Otro");
+		a.setApellidos("Otro 1 Otro 2");
+		repo.save(a);
+		
+		//repo.findAll().forEach(a -> System.out.println(a));
+		//repo.findAll().forEach(System.out::println);
+		
+		repo.findAll().forEach(new Consumer<Alumno>() {
+
+			@Override
+			public void accept(Alumno a) {
+				
+				
+			}
+			
+		});
 		
 	}
 	
