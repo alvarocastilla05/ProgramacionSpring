@@ -23,9 +23,27 @@ public class MainDeMentira {
 	
 	@PostConstruct
 	void ejecutar() {
-		Curso c = new Curso("1ºDAM", "Miguel Campos");
+		/*Curso c = new Curso("1ºDAM", "Miguel Campos");*/
+		
+		Curso c = Curso.builder()
+				.nombre("1ºDAM")
+				.tutor("Miguel Campos")
+				.build();
 		cursoRepo.save(c);
-		Alumno a = new Alumno("Alvaro", "Castilla Cano", "castilla.caalv24@triana.salesianos.edu");
+		
+		/*Alumno a = new Alumno("Alvaro", "Castilla Cano", "castilla.caalv24@triana.salesianos.edu");*/
+		
+		Alumno a = Alumno.builder()
+				.nombre("Alvaro")
+				.apellidos("Castilla Cano")
+				.email("castilla.caalv25@triana.salesianos.edu")
+				.build();	//Esto hace lo mismo que la primera estancia comentada
+		
+		Alumno a2 = Alumno.builder()
+				.nombre("Lucas")
+				.apellidos("Falla")
+				.build();	//Gracias a builder podemos crear alumnos sin la necesidad de los constructores con unos determinados parámetros.
+		
 		a.addToCurso(c);
 		alumnoRepo.save(a);
 		

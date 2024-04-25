@@ -11,12 +11,14 @@ import jakarta.persistence.ForeignKey;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor
 @Data
+@Builder
 public class Alumno {
 
 	@Id @GeneratedValue 
