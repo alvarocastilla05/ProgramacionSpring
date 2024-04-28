@@ -13,7 +13,7 @@ public class EmpleadoController {
 
 	/*
 	 * Para los formularios necesitamos siempre dos métodos
-	 * controladores (dos para cada Formulario
+	 * controladores (dos para cada Formulario)
 	 * 
 	 * Uno para VER (peticion tipo Get) los campos/datos del formulario, es decir,
 	 * para pintar el formulario al comienzo del proceso antes de hacer nada
